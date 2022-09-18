@@ -5,10 +5,10 @@ import { useEffect } from 'react'
 const Mole = (props) => {
     useEffect(() => {
 
-        let randSeconds = Math.ceil(Math.random() * 5000)
+        let seconds = Math.ceil(Math.random() * 5000)
         let timer = setTimeout(() => {
-            props.setDisplayMole(false)
-        }, randSeconds)
+            props.toggle(false)
+        }, seconds)
         return () => clearTimeout(timer)
     })
 
